@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'base.MyUser'
+
 
 # Application definition
 
@@ -55,14 +57,14 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173/"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173/"
+# ]
 
 CORS_ALLOW_ALL_ORIGINS: True
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(f'{BASE_DIR,} media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ROOT_URLCONF = 'socialmedia.urls'
 
